@@ -122,3 +122,17 @@ test("skill ships no personal assets or tuning values", () => {
   const images = fs.readdirSync(path.join(root, "assets/ip-reference")).sort();
   assert.deepEqual(images, ["host-front.png", "transparent.png"]);
 });
+
+test("brand.appName from config reaches the prompt-input template contract", () => {
+  const template = fs.readFileSync(path.join(root, "assets/broll/fixed/prompt-input.html"), "utf8");
+  assert.match(template, /data-field="appName"/);
+  const doc = fs.readFileSync(path.join(root, "references/broll-template-system.md"), "utf8");
+  assert.match(doc, /appName[^\n]*brand\.appName/);
+  const home = configuredHome();
+  const config = JSON.parse(fs.readFileSync(path.join(home, "config.json"), "utf8"));
+  config.brand = {appName: "剪辑助手"};
+  fs.writeFileSync(path.join(home, "config.json"), JSON.stringify(config));
+  const code = "import user_config as u;print(u.brand()['appName']+'|'+u.brand()['courseTitle'])";
+  const out = spawnSync("python3", ["-c", code], {cwd: path.join(root, "scripts"), encoding: "utf8", env: {...process.env, IP_COURSE_HOME: home}}).stdout.trim();
+  assert.equal(out, "剪辑助手|从入门到精通");
+});

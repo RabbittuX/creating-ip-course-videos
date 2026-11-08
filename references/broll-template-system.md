@@ -2,7 +2,7 @@
 
 ## Fixed roles
 
-`chapter`, `subchapter`, and `prompt-input` each have exactly one immutable template in `assets/broll/fixed/`. Use them directly; never query or randomly select an alternative. Only content fields and timing may change.
+`chapter`, `subchapter`, and `prompt-input` each have exactly one immutable template in `assets/broll/fixed/`. Use them directly; never query or randomly select an alternative. Only content fields and timing may change. In `prompt-input`, fill the window title field `appName` with `brand.appName` from the user's config (`python3 -c "import user_config as u; print(u.brand()['appName'])"` in `scripts/`) unless the chapter names a specific app; never leave a stale product name from another project.
 
 ## Library roles
 
