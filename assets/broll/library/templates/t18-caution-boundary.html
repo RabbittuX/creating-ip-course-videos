@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;color:#2d3137;font-family:"PingFang SC",sans-serif}#root .paper{position:absolute;inset:0;background:#f3e9dc}#root .paper:after{content:"";position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}
+    #root .tag{position:absolute;left:96px;top:64px;padding:12px 22px;border-radius:999px;background:#2d3137;color:#f3e9dc;font-size:22px;font-weight:900}#root .title{position:absolute;left:96px;top:138px;font-size:68px;font-weight:950;letter-spacing:-.04em}.title em{font-style:normal;color:#b87700}
+    #root .stage{position:absolute;left:96px;right:96px;top:300px;height:610px;border-radius:36px;background:#2d3137;color:#f3e9dc;padding:62px 70px;box-shadow:0 30px 70px rgba(45,49,55,.22)}
+    #root .caution{display:flex;align-items:center;gap:20px;color:#c88f8a;font-size:20px;font-weight:900;letter-spacing:.13em}.caution i{width:18px;height:18px;border-radius:50%;background:#c88f8a}.boundary{margin-top:74px;width:1320px;font-size:68px;line-height:1.18;font-weight:950;letter-spacing:-.035em}.boundary em{font-style:normal;color:#e4a522}.conditions{position:absolute;left:70px;right:70px;bottom:64px;display:grid;grid-template-columns:1fr 1fr;gap:32px}.condition{border:3px solid #66717b;border-radius:24px;padding:28px 34px;font-size:27px;color:#c4ccd3;font-weight:750}.condition strong{display:block;margin-bottom:10px;color:#f3e9dc;font-size:18px;letter-spacing:.1em}
+    #root .hf-focus{display:none}
+  </style>
+<div data-hf-id="hf-ajsh" id="root" data-composition-id="t18-caution-boundary" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-template-family="evidence" data-information-mode="boundary" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-ef948607" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-2ava" class="paper"></div><div data-hf-id="hf-n6dd" class="tag">T18 · 注意事项</div><div data-hf-id="hf-c3gi" class="title">方法有效，也要先看<em data-hf-id="hf-cy1x">使用边界</em></div><section data-hf-id="hf-872m" class="stage"><div data-hf-id="hf-7pk1" class="caution"><i data-hf-id="hf-wt6k"></i>CAUTION · SCOPE</div><div data-hf-id="hf-gptm" class="boundary">素材目标不明确时，<em data-hf-id="hf-bnog">先别急着生成</em></div><div data-hf-id="hf-kczq" class="conditions"><div data-hf-id="hf-5gl6" class="condition"><strong data-hf-id="hf-iiua">CONDITION 01</strong>参考画面互相冲突时，先统一视觉方向。</div><div data-hf-id="hf-u6i7" class="condition"><strong data-hf-id="hf-ix5b">CONDITION 02</strong>成功标准说不清时，先定义验收结果。</div></div><div data-hf-id="hf-0sgx" class="hf-focus"></div></section>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+    tl.fromTo("#root .stage",{scale:.97,opacity:0},{scale:1,opacity:1,duration:.44,ease:"power3.out"},.16).fromTo("#root .caution",{x:-30,opacity:0},{x:0,opacity:1,duration:.32,ease:"power3.out"},.48).fromTo("#root .boundary",{y:42,opacity:0},{y:0,opacity:1,duration:.44,ease:"power3.out"},.78).to("#root .boundary",{boxShadow:"0 0 0 5px #e4a522,0 0 0 15px rgba(228,165,34,.16)",borderRadius:24,duration:.28,ease:"power2.out"},1.3).fromTo("#root .condition",{y:34,opacity:0},{y:0,opacity:1,duration:.36,stagger:.22,ease:"power3.out"},2.18).to("#root .boundary",{boxShadow:"0 0 0 5px #e4a522,0 0 0 11px rgba(228,165,34,.2)",duration:.3,ease:"sine.inOut",yoyo:true,repeat:3},3.6);
+    window.__timelines["t18-caution-boundary"]=tl;
+  </script>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

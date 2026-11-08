@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "note": "Identity invariants come from the active character registry (user_config.character_registry_path()), not from this file.",
+  "reviewPolicy": {
+    "wholeImageRegenerationOnIdentityFailure": true,
+    "manualApprovalRequired": true,
+    "coordinateConvention": "screen"
+  }
+}

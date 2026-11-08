@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;color:#2d3137;font-family:"PingFang SC",sans-serif}
+    #root .paper{position:absolute;inset:0;background:#f3e9dc}#root .paper:after{content:"";position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}
+    #root .tag{position:absolute;left:96px;top:64px;padding:12px 22px;border-radius:999px;background:#2d3137;color:#f3e9dc;font-size:22px;font-weight:900}
+    #root .title{position:absolute;left:96px;top:136px;font-size:70px;font-weight:950;letter-spacing:-.04em}.title em{font-style:normal;color:#b87700}
+    #root .stage{position:absolute;left:96px;right:96px;top:286px;height:676px;border-radius:34px;background:#2d3137;box-shadow:0 30px 70px rgba(45,49,55,.2);overflow:hidden}
+    #root .rail{position:absolute;left:390px;top:100px;width:8px;height:470px;background:#8196aa;border-radius:999px;transform-origin:50% 0}
+    #root .nodes{position:absolute;left:280px;top:82px;width:1080px;display:grid;gap:26px}
+    #root .node{position:relative;margin-left:150px;width:860px;height:150px;border:3px solid #66717b;border-radius:24px;background:#3a4149;color:#f3e9dc;padding:34px 42px 32px 132px}
+    #root .dot{position:absolute;left:-72px;top:45px;width:56px;height:56px;border-radius:50%;background:#8196aa;border:10px solid #2d3137}.node-no{font-size:17px;color:#c8d0d7;font-weight:900;letter-spacing:.1em}.node-name{margin-top:14px;font-size:35px;font-weight:950}.node-copy{position:absolute;right:34px;top:58px;width:300px;font-size:21px;color:#d5dbe0;font-weight:650}
+    #root .hf-focus{display:none}
+    #root .guide{position:absolute;right:150px;top:66px;width:140px;height:191px;z-index:4;filter:drop-shadow(0 12px 14px rgba(0,0,0,.22))}.guide img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;opacity:0;transform-origin:50% 100%}.guide img:first-child{opacity:1}#root .pose-1{transform:translateX(-15px) scale(2.35)}#root .pose-2{transform:scale(.945)}
+  </style>
+<div data-hf-id="hf-tu9t" id="root" data-composition-id="t13-vertical-workflow" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-template-family="workflow" data-step-count="3" data-workflow-layout="vertical" data-state-finalized="4.5" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-417ef460" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-2ava" class="paper"></div><div data-hf-id="hf-1h1b" class="tag">T13 · 垂直工作流</div><div data-hf-id="hf-ks67" class="title">从输入到输出，<em data-hf-id="hf-lczy">逐层检查</em></div>
+    <div data-hf-id="hf-tan6" class="stage"><div data-hf-id="hf-qzq8" class="rail"></div><div data-hf-id="hf-g17r" class="nodes">
+      <section data-hf-id="hf-83c2" data-state-item class="node node-1"><span data-hf-id="hf-9gry" class="dot"></span><div data-hf-id="hf-sl5m" class="node-no">01 · INPUT</div><div data-hf-id="hf-apqs" class="node-name">输入素材</div><div data-hf-id="hf-5rns" class="node-copy">主题、参考画面、受众目标</div></section>
+      <section data-hf-id="hf-4581" data-state-item class="node node-2"><span data-hf-id="hf-zcc2" class="dot"></span><div data-hf-id="hf-biaz" class="node-no">02 · UNDERSTAND</div><div data-hf-id="hf-tow5" class="node-name">AI 理解</div><div data-hf-id="hf-b9cn" class="node-copy">主体、动作、镜头与约束</div></section>
+      <section data-hf-id="hf-3dk8" data-state-item class="node node-3"><span data-hf-id="hf-zqn3" class="dot"></span><div data-hf-id="hf-zdex" class="node-no">03 · OUTPUT</div><div data-hf-id="hf-yo21" class="node-name">镜头输出</div><div data-hf-id="hf-m2z0" class="node-copy">把抽象条件变成可验证画面</div></section>
+    </div><div data-hf-id="hf-0sgx" class="hf-focus"></div><div data-hf-id="hf-d5ps" class="guide"><img data-hf-id="hf-zm90" class="pose-1" src="assets/ip-reference/host-point.png" alt="从右侧指向流程"><img data-hf-id="hf-3x79" class="pose-2" src="assets/ip-reference/host-inspect.png" alt="检查"><img data-hf-id="hf-exee" class="pose-3" src="assets/ip-reference/host-confirm.png" alt="确认"></div></div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});const active={backgroundColor:"#454b52",borderColor:"#e9a51a",color:"#f3e9dc",boxShadow:"0 0 0 10px rgba(233,165,26,.16)"};const muted={backgroundColor:"#3a4149",borderColor:"#71818e",color:"#f3e9dc",boxShadow:"none"};const completed={backgroundColor:"#344b48",borderColor:"#55d4b4",color:"#f3e9dc",boxShadow:"none"};
+    tl.fromTo("#root .stage",{scale:.97,opacity:0},{scale:1,opacity:1,duration:.4,ease:"power3.out"},.14).fromTo("#root .rail",{scaleY:0},{scaleY:1,duration:.5,ease:"power3.out"},.42).fromTo("#root .node",{x:46,opacity:0},{x:0,opacity:1,duration:.34,stagger:.16,ease:"power3.out"},.58)
+      .to("#root .node-1",{...active,duration:.22},1.18).fromTo("#root .guide",{x:40,opacity:0},{x:0,opacity:1,duration:.3,ease:"power3.out"},1.3).to("#root .guide",{y:-6,duration:.28,ease:"sine.inOut",yoyo:true,repeat:1},1.66)
+      .to("#root .node-1",{...completed,duration:.2},2.32).to("#root .node-2",{...active,duration:.22},2.32).to("#root .guide",{y:176,duration:.3,ease:"power2.inOut"},2.32).to("#root .pose-1",{opacity:0,duration:.1},2.32).to("#root .pose-2",{opacity:1,duration:.16},2.38)
+      .to("#root .node-2",{...completed,duration:.2},3.48).to("#root .node-3",{...active,duration:.22},3.48).to("#root .guide",{y:352,duration:.3,ease:"power2.inOut"},3.48).to("#root .pose-2",{opacity:0,duration:.1},3.48).to("#root .pose-3",{opacity:1,duration:.16},3.54).to("#root .guide",{y:346,duration:.38,ease:"sine.inOut",yoyo:true,repeat:2},3.88).to("#root .node-3",{...completed,duration:.22},4.46).to("#root .guide",{opacity:0,duration:.2},4.5);
+    window.__timelines["t13-vertical-workflow"]=tl;
+  </script>
+  <style data-broll-state-theme="canonical-v1">[data-broll-theme-root="locked-grid-v1"] [data-state-item]{border-color:#71818e}</style>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

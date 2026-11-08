@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "fontFamily": "PingFang SC, Microsoft YaHei, sans-serif",
+  "fontSizePx": 42,
+  "fontWeight": 850,
+  "bottomPx": 22,
+  "leftPx": 70,
+  "rightPx": 70,
+  "heightPx": 108,
+  "maxWidthPx": 1640,
+  "background": "#25292f",
+  "textColor": "#fff7ec",
+  "maxLines": 2,
+  "forbidLeadingPunctuation": true,
+  "forbidTrailingPunctuation": true,
+  "punctuation": "，。！？；：、,.!?;:"
+}

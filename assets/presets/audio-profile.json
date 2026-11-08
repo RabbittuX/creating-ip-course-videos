@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 2,
+  "note": "Generic defaults. Voice, rate and loudness targets are overridden by the user's config.json (see scripts/user_config.py).",
+  "tts": {
+    "provider": "doubao",
+    "voiceType": null,
+    "ratePercent": 0,
+    "cluster": "volcano_tts",
+    "requestUnit": "one-full-chapter",
+    "sampleRateHz": 44100,
+    "channels": 2
+  },
+  "loudness": {
+    "integratedLufs": -14.0,
+    "integratedToleranceLu": 0.5,
+    "loudnessRangeLu": 6.0,
+    "loudnessRangeToleranceLu": 2.0,
+    "maxChapterDeltaLu": 0.5,
+    "truePeakCeilingDbtp": -0.3
+  }
+}

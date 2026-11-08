@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;overflow:hidden;background:#f3e9dc;color:#2d3137;font-family:"PingFang SC",sans-serif}.texture{position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}.rule{position:absolute;left:96px;right:96px;top:110px;height:4px;background:#2d3137;transform-origin:left center}.index{position:absolute;left:96px;top:180px;font-size:30px;font-weight:900;color:#b87700;letter-spacing:.08em}.title{position:absolute;left:96px;right:420px;top:270px;font-size:86px;line-height:1.08;font-weight:950;letter-spacing:-.04em}.goal{position:absolute;left:100px;right:420px;top:535px;font-size:34px;line-height:1.5;color:#5e6873}.progress{position:absolute;left:96px;right:96px;bottom:110px;display:flex;gap:18px}.segment{height:16px;flex:1;border-radius:999px;background:#c8c0b7}.segment.done{background:#8196aa}.segment.current{background:#e4a522}.stamp{position:absolute;right:120px;top:300px;border:3px solid #2d3137;border-radius:50%;width:170px;height:170px;display:grid;place-items:center;font-size:28px;font-weight:900;transform:rotate(-8deg)}
+  </style>
+<div data-hf-id="hf-yo0e" id="root" data-composition-id="chapter-card" data-start="0" data-duration="3" data-width="1920" data-height="1080" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-8e362242" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-3akh" class="texture"></div><div data-hf-id="hf-a46i" class="rule"></div><div data-hf-id="hf-svo8" class="index">CHAPTER 02 / 04</div><div data-hf-id="hf-m8k9" class="title">只调整<br data-hf-id="hf-x5px">一个核心变量</div><div data-hf-id="hf-rgvt" class="goal">本章目标：看懂参数变化如何直接影响生成结果。</div><div data-hf-id="hf-31j5" class="progress"><i data-hf-id="hf-9f89" class="segment done"></i><i data-hf-id="hf-2k1s" class="segment current"></i><i data-hf-id="hf-y59j" class="segment"></i><i data-hf-id="hf-ynk7" class="segment"></i></div><div data-hf-id="hf-94sg" class="stamp">AI 搭子</div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+    tl.fromTo("#root .rule",{scaleX:0},{scaleX:1,duration:.46,ease:"power3.out"},.12)
+      .fromTo("#root .index",{x:-50,opacity:0},{x:0,opacity:1,duration:.35,ease:"power4.out"},.24)
+      .fromTo("#root .title",{y:46,opacity:0},{y:0,opacity:1,duration:.48,ease:"power3.out"},.38)
+      .fromTo("#root .goal",{opacity:0},{opacity:1,duration:.38,ease:"sine.out"},.76)
+      .fromTo("#root .progress",{scaleX:.2,opacity:0},{scaleX:1,opacity:1,duration:.45,ease:"power2.out",transformOrigin:"left center"},.9)
+      .fromTo("#root .stamp",{scale:.7,opacity:0,rotation:-18},{scale:1,opacity:1,rotation:-8,duration:.34,ease:"back.out(1.3)"},1.08);
+    window.__timelines["chapter-card"]=tl;
+  </script>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

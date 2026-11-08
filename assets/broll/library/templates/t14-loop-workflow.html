@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;color:#2d3137;font-family:"PingFang SC",sans-serif}
+    #root .paper{position:absolute;inset:0;background:#f3e9dc}#root .paper:after{content:"";position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}
+    #root .tag{position:absolute;left:96px;top:64px;padding:12px 22px;border-radius:999px;background:#2d3137;color:#f3e9dc;font-size:22px;font-weight:900}
+    #root .title{position:absolute;left:96px;top:136px;font-size:70px;font-weight:950;letter-spacing:-.04em}.title em{font-style:normal;color:#b87700}
+    #root .stage{position:absolute;left:96px;right:96px;top:286px;height:676px;border-radius:34px;background:#2d3137;box-shadow:0 30px 70px rgba(45,49,55,.2);overflow:hidden}
+    #root .orbit{position:absolute;left:370px;top:74px;width:940px;height:520px;border:5px solid #8196aa;border-radius:50%}
+    #root .node{position:absolute;width:300px;height:160px;border:3px solid #66717b;border-radius:28px;background:#3a4149;color:#f3e9dc;padding:34px;text-align:center}.node-1{left:690px;top:52px}.node-2{left:1070px;top:388px}.node-3{left:310px;top:388px}
+    #root .node-no{font-size:17px;color:#9aa7b3;font-weight:900;letter-spacing:.1em}.node-name{margin-top:19px;font-size:38px;font-weight:950}
+    #root .arrow{position:absolute;color:#e4a522;font-size:54px;font-weight:950}.arrow-1{left:1110px;top:205px;rotation:25deg}.arrow-2{left:805px;top:520px}.arrow-3{left:460px;top:216px}
+    #root .hf-focus{display:none}
+    #root .center{position:absolute;left:710px;top:272px;width:300px;text-align:center;color:#f3e9dc}.center strong{display:block;font-size:54px}.center span{display:block;margin-top:12px;color:#aeb7c0;font-size:22px;font-weight:650}
+  </style>
+<div data-hf-id="hf-k6vi" id="root" data-composition-id="t14-loop-workflow" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-template-family="workflow" data-step-count="3" data-workflow-layout="loop" data-state-finalized="4.5" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-c7a85713" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-2ava" class="paper"></div><div data-hf-id="hf-22q4" class="tag">T14 · 闭环工作流</div><div data-hf-id="hf-2s9i" class="title">一次生成不够，<em data-hf-id="hf-7ajf">要跑完闭环</em></div>
+    <div data-hf-id="hf-tan6" class="stage"><div data-hf-id="hf-6f1c" class="orbit"></div><div data-hf-id="hf-zr6k" class="arrow arrow-1">→</div><div data-hf-id="hf-ziw5" class="arrow arrow-2">→</div><div data-hf-id="hf-2tne" class="arrow arrow-3">→</div>
+      <section data-hf-id="hf-83c2" data-state-item class="node node-1"><div data-hf-id="hf-bdkc" class="node-no">01 · MAKE</div><div data-hf-id="hf-q73b" class="node-name">生成</div></section><section data-hf-id="hf-4581" data-state-item class="node node-2"><div data-hf-id="hf-v293" class="node-no">02 · CHECK</div><div data-hf-id="hf-fxvj" class="node-name">检查</div></section><section data-hf-id="hf-3dk8" data-state-item class="node node-3"><div data-hf-id="hf-f78f" class="node-no">03 · FIX</div><div data-hf-id="hf-88a3" class="node-name">修正</div></section>
+      <div data-hf-id="hf-0oij" class="center"><strong data-hf-id="hf-oc2r">有限迭代</strong><span data-hf-id="hf-j3ql">跑一圈，然后停在结论</span></div><div data-hf-id="hf-0sgx" class="hf-focus"></div>
+    </div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});const active={backgroundColor:"#fff8ed",borderColor:"#e9a51a",color:"#2d3137",boxShadow:"0 0 0 10px rgba(233,165,26,.16)"};const muted={backgroundColor:"#3a4149",borderColor:"#71818e",color:"#f3e9dc",boxShadow:"none"};const completed={backgroundColor:"#344b48",borderColor:"#55d4b4",color:"#f3e9dc",boxShadow:"none"};
+    tl.fromTo("#root .stage",{scale:.96,opacity:0},{scale:1,opacity:1,duration:.42,ease:"power3.out"},.14).fromTo("#root .orbit",{scale:.78,opacity:0},{scale:1,opacity:1,duration:.48,ease:"power3.out"},.44).fromTo("#root .node",{scale:.84,opacity:0},{scale:1,opacity:1,duration:.32,stagger:.15,ease:"back.out(1.5)"},.58)
+      .to("#root .node-1",{...active,duration:.22},1.18)
+      .to("#root .node-1",{...completed,duration:.2},2.35).to("#root .node-2",{...active,duration:.22},2.35)
+      .to("#root .node-2",{...completed,duration:.2},3.55).to("#root .node-3",{...active,duration:.22},3.55)
+      .fromTo("#root .center",{scale:.92,opacity:0},{scale:1,opacity:1,duration:.34,ease:"power3.out"},4.16).to("#root .node-3",{...completed,duration:.22},4.48);
+    window.__timelines["t14-loop-workflow"]=tl;
+  </script>
+  <style data-broll-state-theme="canonical-v1">[data-broll-theme-root="locked-grid-v1"] [data-state-item]{border-color:#71818e}</style>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

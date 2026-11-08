@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "description": "Image slots referenced by fixed A-roll and B-roll templates as assets/ip-reference/<slot>.png. setup_config.py fills each slot from config.json; an unset slot uses its fallback, and 'transparent' renders nothing.",
+  "slots": [
+    {"slot": "host-front", "required": true, "fallback": null, "usage": "IP 人物正面定稿图（身份唯一来源，A-roll 生成必附）"},
+    {"slot": "host-hero", "required": false, "fallback": "host-front", "usage": "正面站姿：片头、子章节页"},
+    {"slot": "host-explain", "required": false, "fallback": "host-hero", "usage": "讲解手势：片头、B-roll 讲解角色"},
+    {"slot": "host-shrug", "required": false, "fallback": "host-hero", "usage": "摊手：片头、转场"},
+    {"slot": "host-hesitant", "required": false, "fallback": "host-hero", "usage": "犹豫：转场"},
+    {"slot": "host-point", "required": false, "fallback": "host-explain", "usage": "指向左侧：B-roll 当前项指示"},
+    {"slot": "host-inspect", "required": false, "fallback": "host-hero", "usage": "查看/检查：B-roll"},
+    {"slot": "host-operate", "required": false, "fallback": "host-hero", "usage": "操作：B-roll"},
+    {"slot": "host-confirm", "required": false, "fallback": "host-hero", "usage": "确认/竖拇指：B-roll 终点"},
+    {"slot": "host-node-marker", "required": false, "fallback": "host-point", "usage": "节点标记：B-roll"},
+    {"slot": "mascot", "required": false, "fallback": "transparent", "usage": "可选吉祥物（常态）"},
+    {"slot": "mascot-success", "required": false, "fallback": "mascot", "usage": "可选吉祥物（成功）"},
+    {"slot": "mascot-failure", "required": false, "fallback": "mascot", "usage": "可选吉祥物（失败）"},
+    {"slot": "sidekick", "required": false, "fallback": "transparent", "usage": "可选配角（如产品机器人），出现在开场转场"}
+  ]
+}

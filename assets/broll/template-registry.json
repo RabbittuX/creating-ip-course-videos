@@ -1,0 +1,539 @@
+{
+  "schemaVersion": 3,
+  "selectionPolicy": {
+    "fixedRoles": [
+      "chapter",
+      "subchapter",
+      "prompt-input"
+    ],
+    "seed": "projectId/chapterId/sceneId",
+    "avoidImmediateRepeat": true,
+    "preferLeastUsedWithinVideo": true,
+    "lockAfterHumanApproval": true,
+    "minFunctionalScenesBetweenExactRepeats": 3,
+    "familyShareWarningThreshold": 0.4,
+    "familyVariantThreshold": 3,
+    "enforceDuration": true,
+    "enforceRequiredInteractions": true
+  },
+  "templates": [
+    {
+      "id": "fixed-chapter-v1",
+      "role": "chapter",
+      "mode": "fixed",
+      "immutable": true,
+      "enabled": true,
+      "family": "chapter",
+      "source": "fixed/chapter.html",
+      "tags": [
+        "chapter",
+        "title"
+      ],
+      "version": 1,
+      "minItems": 1,
+      "maxItems": 1,
+      "minDurationSeconds": 2.0,
+      "maxDurationSeconds": 7.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "fixed-subchapter-v1",
+      "role": "subchapter",
+      "mode": "fixed",
+      "immutable": true,
+      "enabled": true,
+      "family": "subchapter",
+      "source": "fixed/subchapter.html",
+      "tags": [
+        "subchapter",
+        "title"
+      ],
+      "version": 1,
+      "minItems": 1,
+      "maxItems": 1,
+      "minDurationSeconds": 2.0,
+      "maxDurationSeconds": 7.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "fixed-prompt-input-v1",
+      "role": "prompt-input",
+      "mode": "fixed",
+      "immutable": true,
+      "enabled": true,
+      "family": "prompt-input",
+      "source": "fixed/prompt-input.html",
+      "tags": [
+        "prompt",
+        "typing",
+        "input"
+      ],
+      "version": 1,
+      "minItems": 1,
+      "maxItems": 1,
+      "minDurationSeconds": 5.0,
+      "maxDurationSeconds": 10.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "t01-ui-operation",
+      "mode": "library",
+      "enabled": true,
+      "family": "ui-operation",
+      "source": "library/templates/t01-ui-operation.html",
+      "tags": [
+        "ui",
+        "operation",
+        "software"
+      ],
+      "maxItems": 6,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I04"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t02-before-after",
+      "mode": "library",
+      "enabled": true,
+      "family": "comparison",
+      "source": "library/templates/t02-before-after.html",
+      "tags": [
+        "before",
+        "after",
+        "comparison"
+      ],
+      "maxItems": 2,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I07"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t03-three-step-workflow",
+      "mode": "library",
+      "enabled": true,
+      "family": "workflow",
+      "source": "library/templates/t03-three-step-workflow.html",
+      "tags": [
+        "workflow",
+        "linear",
+        "three-step"
+      ],
+      "maxItems": 3,
+      "version": 2,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I01",
+        "I03",
+        "I07"
+      ],
+      "stateProgress": true,
+      "requiresNarrationMap": true,
+      "requiresResolvedTimeline": true,
+      "stateDriver": "broll-progress-controller",
+      "progressMode": "narration-driven"
+    },
+    {
+      "id": "t04-parameter-zoom",
+      "mode": "library",
+      "enabled": true,
+      "family": "parameter",
+      "source": "library/templates/t04-parameter-zoom.html",
+      "tags": [
+        "parameter",
+        "detail",
+        "zoom"
+      ],
+      "maxItems": 4,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I02"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t05-failure",
+      "mode": "library",
+      "enabled": true,
+      "family": "failure",
+      "source": "library/templates/t05-failure.html",
+      "tags": [
+        "failure",
+        "error",
+        "risk"
+      ],
+      "maxItems": 4,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I06"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t06-result-showcase",
+      "mode": "library",
+      "enabled": true,
+      "family": "result",
+      "source": "library/templates/t06-result-showcase.html",
+      "tags": [
+        "result",
+        "showcase",
+        "success"
+      ],
+      "maxItems": 5,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I07"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t07-waiting",
+      "mode": "library",
+      "enabled": true,
+      "family": "waiting",
+      "source": "library/templates/t07-waiting.html",
+      "tags": [
+        "waiting",
+        "loading",
+        "process"
+      ],
+      "maxItems": 5,
+      "version": 2,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I03"
+      ],
+      "stateProgress": true,
+      "requiresNarrationMap": true,
+      "requiresResolvedTimeline": true,
+      "stateDriver": "broll-progress-controller",
+      "progressMode": "narration-driven"
+    },
+    {
+      "id": "t08-concept-diagram",
+      "mode": "library",
+      "enabled": true,
+      "family": "concept",
+      "source": "library/templates/t08-concept-diagram.html",
+      "tags": [
+        "concept",
+        "relationship",
+        "diagram"
+      ],
+      "maxItems": 6,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I02"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t09-pain-points",
+      "mode": "library",
+      "enabled": true,
+      "family": "pain-points",
+      "source": "library/templates/t09-pain-points.html",
+      "tags": [
+        "pain",
+        "problem",
+        "list"
+      ],
+      "maxItems": 6,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I03"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t10-content-map",
+      "mode": "library",
+      "enabled": true,
+      "family": "map",
+      "source": "library/templates/t10-content-map.html",
+      "tags": [
+        "map",
+        "overview",
+        "structure"
+      ],
+      "maxItems": 8,
+      "version": 3,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I02"
+      ],
+      "progressMode": "narration-driven",
+      "stateProgress": true,
+      "requiresNarrationMap": true,
+      "requiresResolvedTimeline": true,
+      "stateDriver": "broll-progress-controller"
+    },
+    {
+      "id": "t11-chapter-title",
+      "mode": "library",
+      "enabled": false,
+      "family": "chapter",
+      "source": "library/templates/t11-chapter-title.html",
+      "tags": [
+        "legacy",
+        "chapter"
+      ],
+      "replacedBy": "fixed-chapter-v1",
+      "maxItems": 1,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I02"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t12-stair-workflow",
+      "mode": "library",
+      "enabled": true,
+      "family": "workflow",
+      "source": "library/templates/t12-stair-workflow.html",
+      "tags": [
+        "workflow",
+        "linear",
+        "progressive"
+      ],
+      "maxItems": 5,
+      "version": 2,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I07"
+      ],
+      "stateProgress": true,
+      "requiresNarrationMap": true,
+      "requiresResolvedTimeline": true,
+      "stateDriver": "broll-progress-controller",
+      "progressMode": "narration-driven"
+    },
+    {
+      "id": "t13-vertical-workflow",
+      "mode": "library",
+      "enabled": true,
+      "family": "workflow",
+      "source": "library/templates/t13-vertical-workflow.html",
+      "tags": [
+        "workflow",
+        "linear",
+        "vertical"
+      ],
+      "maxItems": 6,
+      "version": 2,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I02",
+        "I03",
+        "I07"
+      ],
+      "stateProgress": true,
+      "requiresNarrationMap": true,
+      "requiresResolvedTimeline": true,
+      "stateDriver": "broll-progress-controller",
+      "progressMode": "narration-driven"
+    },
+    {
+      "id": "t14-loop-workflow",
+      "mode": "library",
+      "enabled": true,
+      "family": "workflow",
+      "source": "library/templates/t14-loop-workflow.html",
+      "tags": [
+        "workflow",
+        "iterative",
+        "loop"
+      ],
+      "maxItems": 6,
+      "version": 2,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [],
+      "stateProgress": true,
+      "requiresNarrationMap": true,
+      "requiresResolvedTimeline": true,
+      "stateDriver": "broll-progress-controller",
+      "progressMode": "narration-driven"
+    },
+    {
+      "id": "t15-definition",
+      "mode": "library",
+      "enabled": true,
+      "family": "definition",
+      "source": "library/templates/t15-definition.html",
+      "tags": [
+        "definition",
+        "concept",
+        "explain"
+      ],
+      "maxItems": 5,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "t16-misconception",
+      "mode": "library",
+      "enabled": true,
+      "family": "misconception",
+      "source": "library/templates/t16-misconception.html",
+      "tags": [
+        "misconception",
+        "correction",
+        "contrast"
+      ],
+      "maxItems": 5,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "t17-principle-checklist",
+      "mode": "library",
+      "enabled": true,
+      "family": "checklist",
+      "source": "library/templates/t17-principle-checklist.html",
+      "tags": [
+        "principle",
+        "checklist",
+        "rules"
+      ],
+      "maxItems": 8,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "t18-caution-boundary",
+      "mode": "library",
+      "enabled": true,
+      "family": "caution",
+      "source": "library/templates/t18-caution-boundary.html",
+      "tags": [
+        "caution",
+        "boundary",
+        "warning"
+      ],
+      "maxItems": 5,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "t19-data-evidence",
+      "mode": "library",
+      "enabled": true,
+      "family": "evidence",
+      "source": "library/templates/t19-data-evidence.html",
+      "tags": [
+        "data",
+        "evidence",
+        "metric"
+      ],
+      "maxItems": 6,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [],
+      "progressMode": "static"
+    },
+    {
+      "id": "t20-case-intro",
+      "mode": "library",
+      "enabled": true,
+      "family": "case",
+      "source": "library/templates/t20-case-intro.html",
+      "tags": [
+        "case",
+        "example",
+        "intro"
+      ],
+      "maxItems": 4,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I02"
+      ],
+      "progressMode": "static"
+    },
+    {
+      "id": "t21-chapter-recap",
+      "mode": "library",
+      "enabled": true,
+      "family": "recap",
+      "source": "library/templates/t21-chapter-recap.html",
+      "tags": [
+        "recap",
+        "summary",
+        "complete"
+      ],
+      "maxItems": 8,
+      "version": 1,
+      "minItems": 1,
+      "minDurationSeconds": 3.0,
+      "maxDurationSeconds": 8.0,
+      "supportedInteractions": [
+        "I07"
+      ],
+      "progressMode": "static"
+    }
+  ]
+}

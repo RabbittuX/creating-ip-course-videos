@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head></head><body><template>
+  <style>
+    #root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;font-family:"PingFang SC",sans-serif;color:#2d3137}
+    #root .route-wrap{position:absolute;left:96px;right:96px;top:390px;height:260px}
+    #root .route-line{position:absolute;left:84px;right:84px;top:91px;height:6px;border-radius:999px;background:#8196aa;transform-origin:0 50%}
+    #root .route-nodes{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+    #root .route-node{position:relative;height:188px;border:3px solid #8196aa;border-radius:26px;background:#fff8ed;padding:30px 30px;box-shadow:0 18px 38px rgba(45,49,55,.12)}
+    #root .route-index{font-size:18px;font-weight:900;color:#8196aa;letter-spacing:.08em}
+    #root .route-label{margin-top:20px;font-size:34px;font-weight:950}
+    #root .hf-focus{position:absolute;left:0;top:0;width:402px;height:188px;border:5px solid #e4a522;border-radius:26px;box-shadow:0 0 0 10px rgba(228,165,34,.16);pointer-events:none}
+  </style>
+<div data-hf-id="hf-vdn2" id="root" data-composition-id="route-progress" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-min-items="3" data-max-items="5" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-b263c34f" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-frf8" class="route-wrap">
+      <div data-hf-id="hf-m3n2" class="route-line"></div>
+      <div data-hf-id="hf-akov" class="route-nodes">
+        <div data-hf-id="hf-7khw" class="route-node"><div data-hf-id="hf-vkqf" class="route-index">01</div><div data-hf-id="hf-sw6r" class="route-label">选题</div></div>
+        <div data-hf-id="hf-2oxo" class="route-node"><div data-hf-id="hf-v6fe" class="route-index">02</div><div data-hf-id="hf-ev1f" class="route-label">提示词</div></div>
+        <div data-hf-id="hf-1i0l" class="route-node"><div data-hf-id="hf-us4d" class="route-index">03</div><div data-hf-id="hf-rqvh" class="route-label">生成</div></div>
+        <div data-hf-id="hf-1wbm" class="route-node"><div data-hf-id="hf-xk9k" class="route-index">04</div><div data-hf-id="hf-fjr4" class="route-label">优化</div></div>
+      </div>
+      <div data-hf-id="hf-0sgx" class="hf-focus"></div>
+    </div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};
+    const tl=gsap.timeline({paused:true});
+    tl.fromTo("#root .route-line",{scaleX:0},{scaleX:1,duration:.42,ease:"power3.out"},.18)
+      .fromTo("#root .route-node",{y:18,opacity:0},{y:0,opacity:1,stagger:.12,duration:.3,ease:"power3.out"},.42)
+      .fromTo("#root .hf-focus",{scale:.86,opacity:0},{scale:1,opacity:1,duration:.26,ease:"power2.out"},1.2);
+    window.__timelines["route-progress"]=tl;
+  </script>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

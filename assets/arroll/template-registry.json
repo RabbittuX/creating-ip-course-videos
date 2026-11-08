@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "selection": "direct-by-role",
+    "randomSelection": false,
+    "imageGeneration": false,
+    "includeInArollReview": true,
+    "includeInPreviewReview": true
+  },
+  "templates": [
+    {
+      "id": "fixed-aroll-opening-title-v1",
+      "role": "opening-title",
+      "mode": "fixed",
+      "immutable": true,
+      "source": "fixed/opening-title.html",
+      "mutableFields": [
+        "backgroundTitle"
+      ],
+      "durationSeconds": 7
+    },
+    {
+      "id": "fixed-aroll-opening-transition-v1",
+      "role": "opening-transition",
+      "mode": "fixed",
+      "immutable": true,
+      "source": "fixed/opening-transition.html",
+      "mutableFields": [],
+      "durationSeconds": 1.79
+    }
+  ]
+}

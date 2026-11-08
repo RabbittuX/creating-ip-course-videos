@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<body>
+<template>
+  <div id="fixed-aroll-opening-transition-root" data-composition-id="fixed-aroll-opening-transition" data-width="1920" data-height="1080" data-duration="1.79">
+    <div class="paper"></div>
+    <div class="stage">
+      <img class="outro-pose op1" src="assets/ip-reference/host-hesitant.png" alt="IP 人物犹豫动作">
+      <img class="outro-pose op2" src="assets/ip-reference/host-explain.png" alt="IP 人物讲解动作">
+      <img class="outro-pose op3" src="assets/ip-reference/host-shrug.png" alt="IP 人物摊手动作">
+      <img class="outro-robot" src="assets/ip-reference/sidekick.png" alt="配角">
+      <div class="portal"></div>
+      <img class="outro-cat" src="assets/ip-reference/mascot.png" alt="吉祥物">
+      <div class="scratches"></div>
+    </div>
+  </div>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}@font-face{font-family:"Microsoft YaHei";src:local("Microsoft YaHei")}
+    #fixed-aroll-opening-transition-root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#f8f7f6;color:#2d3137;font-family:"PingFang SC","Microsoft YaHei",sans-serif}#fixed-aroll-opening-transition-root *{box-sizing:border-box}.paper{position:absolute;inset:0;background:radial-gradient(circle at 52% 34%,#fff9,transparent 57%),radial-gradient(#2d313709 .55px,transparent .72px),#f8f7f6;background-size:auto,7px 7px,auto}.stage{position:absolute;left:72px;right:72px;top:82px;height:782px;border:3px solid #2d3137e6;border-radius:30px;background:#fdfaf4;overflow:hidden;box-shadow:0 0 0 8px #fffc,0 18px 34px #2d313726}.portal{position:absolute;right:230px;top:135px;width:500px;height:500px;border-radius:50%;border:11px solid #e4a522;background:radial-gradient(circle,#252b31 0 55%,#4c5660 56% 58%,#252b31 59%);box-shadow:0 0 0 18px #e4a5222e,0 0 60px #e4a52240;z-index:3}.outro-pose{position:absolute;left:230px;bottom:-155px;width:620px;height:650px;object-fit:contain;z-index:5;opacity:0}.outro-robot{position:absolute;right:610px;bottom:60px;width:270px;height:450px;object-fit:contain;z-index:5;opacity:0}.outro-cat{position:absolute;right:360px;bottom:145px;width:135px;height:135px;object-fit:contain;z-index:6}.scratches{position:absolute;inset:0;z-index:28;pointer-events:none;background:linear-gradient(12deg,transparent 16%,rgba(94,98,101,.14) 16.1%,transparent 16.25%),linear-gradient(-22deg,transparent 72%,rgba(129,119,108,.12) 72.1%,transparent 72.25%)}
+  </style>
+  <script>
+    (()=>{const id="fixed-aroll-opening-transition",root=document.querySelector('[data-composition-id="'+id+'"]'),tl=gsap.timeline({paused:true});tl.set(root.querySelector('.op1'),{opacity:1},0).set(root.querySelector('.op1'),{opacity:0},.36).set(root.querySelector('.op2'),{opacity:1},.36).set(root.querySelector('.op2'),{opacity:0},.92).set(root.querySelector('.op3'),{opacity:1},.92).fromTo(root.querySelector('.outro-robot'),{opacity:0,y:24},{opacity:1,y:0,duration:.34},.12).fromTo(root.querySelector('.portal'),{opacity:0,scale:.72},{opacity:1,scale:1,duration:.4},.25).to(root.querySelector('.outro-cat'),{x:130,y:-105,scale:.74,duration:.45},1.12).fromTo(root.querySelector('.stage'),{y:2},{y:-2,duration:.895,yoyo:true,repeat:1,ease:'sine.inOut'},0);window.__timelines=window.__timelines||{};window.__timelines["fixed-aroll-opening-transition"]=tl;})();
+  </script>
+</template>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "cadence": {
+    "targetActionBeatSeconds": {
+      "min": 3,
+      "max": 5
+    },
+    "softMaxStillSeconds": 6,
+    "hardMaxStillSeconds": 8,
+    "requireMeaningfulActionChange": true,
+    "cameraMovementCountsAsActionChange": false
+  },
+  "reviewCrops": [
+    "full",
+    "face",
+    "screenLeftEye",
+    "screenRightEye"
+  ],
+  "automatedValidation": {
+    "structuralOnly": true,
+    "semanticVisualJudgement": false,
+    "requiredFields": [
+      "candidateId",
+      "assetPath",
+      "assetHash",
+      "sequenceId",
+      "beatId",
+      "narrationCue",
+      "actorAction",
+      "gazeTarget",
+      "propState",
+      "durationSeconds"
+    ]
+  }
+}

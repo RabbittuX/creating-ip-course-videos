@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "selection": {
+    "minFunctionalScenesBetweenExactRepeats": 3,
+    "familyShareWarningThreshold": 0.4,
+    "familyVariantThreshold": 3
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "safeMarginPx": 64,
+    "focusAlignmentTolerancePx": 8
+  },
+  "stateColors": {
+    "active": "#e9a51a",
+    "completed": "#55d4b4",
+    "unvisited": "#71818e"
+  },
+  "inspection": {
+    "required": false,
+    "requireFirstAndLastFrame": true,
+    "blockTextOverflow": true,
+    "blockOutOfBounds": true,
+    "blockFocusMisalignment": true,
+    "blockWhiteFrames": true
+  },
+  "requiredHumanChecks": [
+    "semanticAccuracy"
+  ],
+  "realUi": {
+    "requireOriginalAsset": true,
+    "requireMatchingDomain": true,
+    "requireMatchingPage": true,
+    "requireAuthenticityApproval": true
+  }
+}

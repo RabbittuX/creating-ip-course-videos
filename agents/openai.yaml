@@ -1,0 +1,8 @@
+interface:
+  display_name: "IP课程视频生产线"
+  short_description: "按固定IP、模板、配音与人工门禁制作章节课程视频"
+  brand_color: "#E9A51A"
+  default_prompt: "Use $creating-ip-course-videos to turn my complete narration into review-gated chapter videos."
+policy:
+  allow_implicit_invocation: true
+

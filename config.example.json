@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "host": {
+    "characterId": "ip-host",
+    "displayName": "我的 IP 人物",
+    "version": "1.0.0",
+    "images": {
+      "host-front": "~/my-ip/front.png",
+      "host-hero": "~/my-ip/hero.png",
+      "host-explain": "~/my-ip/explain.png",
+      "host-shrug": null,
+      "host-hesitant": null,
+      "host-point": null,
+      "host-inspect": null,
+      "host-operate": null,
+      "host-confirm": null,
+      "host-node-marker": null
+    },
+    "identityInvariants": [
+      "用 3～6 条写清每次生成都不能变的外观特征",
+      "例如：发型与发色",
+      "例如：左右眼的形状和颜色（按画面左右描述）",
+      "例如：服装配色"
+    ]
+  },
+  "extraCharacters": [
+    {
+      "characterId": "mascot",
+      "displayName": "吉祥物",
+      "role": "optional-mascot",
+      "version": "1.0.0",
+      "slot": "mascot",
+      "images": {
+        "mascot": null,
+        "mascot-success": null,
+        "mascot-failure": null
+      },
+      "identityInvariants": [
+        "填写吉祥物不能变的外观特征"
+      ]
+    },
+    {
+      "characterId": "sidekick",
+      "displayName": "配角",
+      "role": "optional-sidekick",
+      "version": "1.0.0",
+      "slot": "sidekick",
+      "images": {
+        "sidekick": null
+      },
+      "identityInvariants": [
+        "填写配角不能变的外观特征"
+      ]
+    }
+  ],
+  "tts": {
+    "provider": "doubao",
+    "voiceType": "填你在火山引擎控制台开通的音色 ID",
+    "ratePercent": 0,
+    "cluster": "volcano_tts"
+  },
+  "loudness": {
+    "integratedLufs": -14.0,
+    "integratedToleranceLu": 0.5,
+    "loudnessRangeLu": 6.0,
+    "loudnessRangeToleranceLu": 2.0
+  },
+  "brand": {
+    "courseTitle": "从入门到精通",
+    "appName": "AI 助手"
+  },
+  "captions": {
+    "protectedTerms": [
+      "填你课程里不能被字幕拆断的产品名或术语"
+    ]
+  }
+}

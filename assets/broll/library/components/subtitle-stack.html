@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;overflow:hidden;background:#f3e9dc;color:#2d3137;font-family:"PingFang SC",sans-serif}
+    .texture{position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}
+    .guide{position:absolute;left:96px;right:96px;top:64px;bottom:96px;border:2px dashed rgba(129,150,170,.35);border-radius:28px}
+    .l1{position:absolute;top:64px;left:96px;background:#2d3137;color:#f3e9dc;border-radius:999px;padding:13px 22px;font-size:22px;font-weight:800;letter-spacing:.03em}
+    .ui{position:absolute;left:96px;right:96px;top:142px;height:720px;border-radius:28px;background:#2d3137;overflow:hidden}.ui:before{content:"真实界面区域";position:absolute;left:48px;top:40px;color:#8196aa;font-size:28px;font-weight:700}.control{position:absolute;right:90px;top:250px;width:420px;height:96px;border-radius:18px;background:#454b53}
+    .focus{position:absolute;right:74px;top:234px;width:452px;height:128px;border:4px solid #e4a522;border-radius:22px}.l2{position:absolute;right:96px;top:390px;background:#e4a522;color:#372700;padding:12px 18px;border-radius:13px;font-size:22px;font-weight:900}
+    .l3{position:absolute;left:180px;right:180px;bottom:72px;text-align:center;font-size:34px;font-weight:900;line-height:1.35}.l3 span{display:block}.gold{color:#b87700}
+  </style>
+<div data-hf-id="hf-16o2" id="root" data-composition-id="subtitle-stack" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-3ac6d597" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-3akh" class="texture"></div><div data-hf-id="hf-d5ps" class="guide"></div><div data-hf-id="hf-4tzn" class="l1">第 2 步 · 调整生成参数</div><div data-hf-id="hf-yg2m" class="ui"><div data-hf-id="hf-sxh3" class="control"></div></div><div data-hf-id="hf-rp14" class="focus"></div><div data-hf-id="hf-ec6y" class="l2">只改这里</div><div data-hf-id="hf-532n" class="l3"><span data-hf-id="hf-4c2o">参数越多不代表效果越好</span><span data-hf-id="hf-zp4c">先锁定<span data-hf-id="hf-otd8" class="gold" style="display:inline">一个核心变量</span></span></div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+    tl.fromTo("#root .l1",{x:-60,opacity:0},{x:0,opacity:1,duration:.35,ease:"power3.out"},.14)
+      .fromTo("#root .focus",{scale:.9,opacity:0},{scale:1,opacity:1,duration:.25,ease:"power2.out"},.62)
+      .fromTo("#root .l2",{x:35,opacity:0},{x:0,opacity:1,duration:.25,ease:"power4.out"},.78)
+      .fromTo("#root .l3",{y:34,opacity:0},{y:0,opacity:1,duration:.4,ease:"power2.out"},1.05);
+    window.__timelines["subtitle-stack"]=tl;
+  </script>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

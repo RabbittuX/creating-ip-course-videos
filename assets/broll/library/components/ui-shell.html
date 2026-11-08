@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;overflow:hidden;color:#2d3137;font-family:"PingFang SC",sans-serif}
+    .paper{position:absolute;inset:0;background:#f3e9dc}
+    .paper:after{content:"";position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}
+    .meta{position:absolute;top:64px;left:96px;font-size:20px;font-weight:700;letter-spacing:.08em;color:#5f7285}
+    .shell{position:absolute;left:96px;right:96px;top:126px;height:820px;border-radius:30px;background:#2d3137;box-shadow:0 28px 70px rgba(45,49,55,.18);overflow:hidden}
+    .bar{height:72px;display:flex;align-items:center;padding:0 28px;gap:13px;border-bottom:2px solid #454a51}.dot{width:15px;height:15px;border-radius:50%;background:#8196aa}.dot.gold{background:#e4a522}
+    .viewport{position:absolute;left:28px;right:470px;top:98px;bottom:28px;border-radius:22px;background:#f8f3eb;padding:30px}.canvas{height:100%;border:2px dashed #b9ac9e;border-radius:18px;display:grid;place-items:center;color:#5f7285;font-size:30px;font-weight:700}
+    .panel{position:absolute;right:28px;top:98px;width:410px;bottom:28px;border-radius:22px;background:#393e45;padding:28px 30px;color:#f3e9dc}.panel-title{font-size:25px;font-weight:800;margin-bottom:28px}.row{margin-bottom:24px}.row-label{font-size:18px;color:#aeb7c0;margin-bottom:8px}.field{height:58px;border-radius:13px;background:#282c31;border:2px solid #50565e;padding:0 18px;display:flex;align-items:center;justify-content:space-between;font-size:22px}
+    .focus{position:absolute;right:43px;top:263px;width:380px;height:82px;border:4px solid #e4a522;border-radius:16px;box-shadow:0 0 0 8px rgba(228,165,34,.14)}
+    .cursor{position:absolute;right:380px;top:640px;width:34px;height:45px;filter:drop-shadow(0 4px 6px rgba(0,0,0,.25));z-index:5}.cursor:before{content:"";display:block;width:0;height:0;border-left:16px solid #f3e9dc;border-right:8px solid transparent;border-bottom:36px solid transparent;transform:rotate(-17deg);filter:drop-shadow(0 0 2px #2d3137)}
+    .ripple{position:absolute;right:195px;top:290px;width:72px;height:72px;border:3px solid #e4a522;border-radius:50%;opacity:0}
+  </style>
+<div data-hf-id="hf-bog2" id="root" data-composition-id="ui-shell" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-3c8c6723" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-2ava" class="paper"></div><div data-hf-id="hf-b8h7" class="meta">AI WORKBENCH · UI 操作容器</div>
+    <div data-hf-id="hf-x9fi" id="ui-shell-shell" class="shell"><div data-hf-id="hf-ufsv" class="bar"><i data-hf-id="hf-b3e5" class="dot gold"></i><i data-hf-id="hf-6bgx" class="dot"></i><i data-hf-id="hf-0j5x" class="dot"></i></div><div data-hf-id="hf-rhem" class="viewport"><div data-hf-id="hf-6wzg" class="canvas">真实界面 / 生成画面</div></div><div data-hf-id="hf-owjm" class="panel"><div data-hf-id="hf-gvr0" class="panel-title">生成设置</div><div data-hf-id="hf-thy4" class="row"><div data-hf-id="hf-7n4x" class="row-label">画面比例</div><div data-hf-id="hf-0ztw" class="field"><b data-hf-id="hf-okk5">16:9</b><span data-hf-id="hf-i3pb">⌄</span></div></div><div data-hf-id="hf-lt04" class="row"><div data-hf-id="hf-eaxh" class="row-label">运动强度</div><div data-hf-id="hf-bxgc" class="field"><b data-hf-id="hf-fqjc">适中</b><span data-hf-id="hf-mfph">62</span></div></div><div data-hf-id="hf-km31" class="row"><div data-hf-id="hf-i33a" class="row-label">一致性</div><div data-hf-id="hf-aqj9" class="field"><b data-hf-id="hf-thxj">高</b><span data-hf-id="hf-51uf">86</span></div></div></div><div data-hf-id="hf-rp14" class="focus"></div><div data-hf-id="hf-2qfi" class="ripple"></div><div data-hf-id="hf-tuza" class="cursor"></div></div>
+  <script>
+    window.__timelines=window.__timelines||{};
+    const tl=gsap.timeline({paused:true});
+    tl.fromTo("#ui-shell-shell",{scale:.96,opacity:0},{scale:1,opacity:1,duration:.32,ease:"power3.out"},.16)
+      .fromTo("#root .focus",{opacity:0,scale:.92},{opacity:1,scale:1,duration:.24,ease:"power2.out"},.72)
+      .fromTo("#root .cursor",{x:-260,y:260,opacity:0},{x:0,y:0,opacity:1,duration:.4,ease:"power2.inOut"},1.02)
+      .to("#root .cursor",{scale:.84,duration:.1,ease:"power2.in",yoyo:true,repeat:1},1.48)
+      .set("#root .ripple",{opacity:1,scale:0},1.5)
+      .to("#root .ripple",{opacity:0,scale:3,duration:.55,ease:"power3.out",immediateRender:false},1.5);
+    window.__timelines["ui-shell"]=tl;
+  </script>
+</div>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

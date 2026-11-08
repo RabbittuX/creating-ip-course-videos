@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "master": {
+    "preserveSourceResolution": true,
+    "preserveSourceFps": true,
+    "videoCodec": "prores_ks",
+    "audioCodec": "pcm_s24le"
+  },
+  "upload": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "video": {
+      "codec": "libx264",
+      "crf": 21,
+      "preset": "slow",
+      "pixelFormat": "yuv420p"
+    },
+    "audio": {
+      "codec": "aac",
+      "bitrateKbps": 192,
+      "sampleRateHz": 48000
+    },
+    "faststart": true
+  },
+  "qc": {
+    "detectBlackFrames": true,
+    "detectWhiteFlashes": true,
+    "detectUnexpectedSilence": true,
+    "rejectPlayerChrome": true,
+    "rejectPrivateAbsolutePaths": true
+  }
+}

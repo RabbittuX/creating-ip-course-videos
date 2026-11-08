@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;color:#2d3137;font-family:"PingFang SC",sans-serif}
+    #root .paper{position:absolute;inset:0;background:#f3e9dc}#root .paper:after{content:"";position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}
+    #root .route-mini{position:absolute;left:96px;right:96px;bottom:94px;height:118px;display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+    #root .route-mini:before{content:"";position:absolute;left:160px;right:160px;top:41px;height:5px;background:#8196aa;border-radius:999px}
+    #root .mini{position:relative;height:84px;border:3px solid #8196aa;border-radius:22px;background:#fff8ed;padding:24px 28px;font-size:24px;font-weight:900}
+    #root .chapter{position:absolute;left:150px;top:168px;width:1260px;height:620px;border-radius:38px;background:#2d3137;color:#f3e9dc;padding:72px 84px;box-shadow:0 34px 80px rgba(45,49,55,.22)}
+    #root .eyebrow{font-size:22px;color:#e4a522;font-weight:900;letter-spacing:.14em}.chapter-no{position:absolute;right:76px;top:48px;font-size:190px;line-height:1;color:#787a7c;font-weight:950}
+    #root .chapter-title{margin-top:74px;font-size:92px;line-height:1.08;font-weight:950;letter-spacing:-.05em}.chapter-goal{margin-top:46px;width:850px;font-size:34px;line-height:1.5;color:#c8d0d7;font-weight:650}
+    #root .hf-focus{display:none}
+    #root .guide{position:absolute;left:760px;bottom:68px;width:210px;height:280px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 16px 18px rgba(45,49,55,.18))}
+  </style>
+<div data-hf-id="hf-jbyh" id="root" data-composition-id="t11-chapter-title" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-template-family="narrative" data-chapter-index="02" data-active-chapter="2" data-component-source="route-progress" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-8ae63a1c" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-2ava" class="paper"></div>
+    <section data-hf-id="hf-mmhv" class="chapter"><div data-hf-id="hf-8xio" class="eyebrow">PART 02 · WORKFLOW</div><div data-hf-id="hf-8pxj" class="chapter-no">02</div><div data-hf-id="hf-1964" class="chapter-title">建立稳定工作流</div><div data-hf-id="hf-y5l0" class="chapter-goal">从随机试错，切换到一套可以反复执行、持续优化的方法。</div></section>
+    <div data-hf-id="hf-ux25" class="route-mini"><div data-hf-id="hf-gmdu" class="mini">01 痛点</div><div data-hf-id="hf-lokf" class="mini">02 工作流</div><div data-hf-id="hf-gxs5" class="mini">03 案例</div><div data-hf-id="hf-u75t" class="mini">04 总结</div><div data-hf-id="hf-0sgx" class="hf-focus"></div></div>
+    <img data-hf-id="hf-kmlt" class="guide" src="assets/ip-reference/host-point.png" alt="指向章节的角色">
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};
+    const tl=gsap.timeline({paused:true});
+    tl.fromTo("#root .route-mini",{y:120,opacity:0},{y:0,opacity:1,duration:.42,ease:"power3.out"},.08)
+      .to("#root .mini:nth-child(2)",{borderColor:"#e4a522",boxShadow:"0 0 0 10px rgba(228,165,34,.16)",duration:.3,ease:"power2.out"},.36)
+      .fromTo("#root .chapter",{y:90,scale:.94,opacity:0},{y:0,scale:1,opacity:1,duration:.5,ease:"power3.out"},.72)
+      .fromTo("#root .eyebrow",{x:-28,opacity:0},{x:0,opacity:1,duration:.3,ease:"power3.out"},1.12)
+      .fromTo("#root .chapter-title",{y:40,opacity:0},{y:0,opacity:1,duration:.46,ease:"power3.out"},1.26)
+      .fromTo("#root .chapter-goal",{y:28,opacity:0},{y:0,opacity:1,duration:.4,ease:"power3.out"},1.6)
+      .fromTo("#root .guide",{x:100,opacity:0},{x:0,opacity:1,duration:.4,ease:"power3.out"},2.12)
+      .to("#root .guide",{y:-7,duration:.42,ease:"sine.inOut",yoyo:true,repeat:4},2.58);
+    window.__timelines["t11-chapter-title"]=tl;
+  </script>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

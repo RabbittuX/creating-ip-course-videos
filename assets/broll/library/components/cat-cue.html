@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head></head><body><template>
+  <style>
+    @font-face{font-family:"PingFang SC";src:local("PingFang SC")}
+    #root{position:absolute;inset:0;overflow:hidden;background:#f3e9dc;font-family:"PingFang SC",sans-serif;color:#2d3137}.texture{position:absolute;inset:0;background:url("assets/textures/paper-texture.png") center/720px;opacity:.035}.panel{position:absolute;left:96px;right:96px;top:132px;height:780px;border-radius:30px;background:#2d3137;display:grid;place-items:center;color:#8196aa;font-size:34px;font-weight:800}.cat{position:absolute;right:82px;bottom:45px;width:245px;height:275px}.cat img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 15px 18px rgba(45,49,55,.14))}.tag{position:absolute;right:120px;bottom:330px;background:#fff8ed;border:3px solid #2d3137;border-radius:18px;padding:15px 19px;font-size:24px;font-weight:900}
+  </style>
+<div data-hf-id="hf-ti9q" id="root" data-composition-id="cat-cue" data-start="0" data-duration="5" data-width="1920" data-height="1080" data-broll-theme-root="locked-grid-v1">
+    <div data-hf-id="hf-bg-e0a65209" class="broll-background" data-broll-background="locked-grid-v1"></div>
+    <div data-hf-id="hf-3akh" class="texture"></div><div data-hf-id="hf-2p72" class="panel">生成失败 · 检查输入条件</div><div data-hf-id="hf-csar" class="tag">这步翻车了</div><div data-hf-id="hf-q0gk" class="cat"><img data-hf-id="hf-ritp" src="assets/ip-reference/mascot-failure.png" alt="吉祥物翻车反应"></div>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+    tl.fromTo("#root .cat",{x:110,opacity:0},{x:0,opacity:1,duration:.34,ease:"power4.out"},.3)
+      .fromTo("#root .tag",{scale:.9,opacity:0},{scale:1,opacity:1,duration:.24,ease:"power2.out"},.52)
+      .to("#root .cat",{rotation:-2,duration:.16,ease:"sine.inOut",yoyo:true,repeat:1},.92);
+    window.__timelines["cat-cue"]=tl;
+  </script>
+  <style data-broll-theme="locked-grid-v1">
+    [data-broll-theme-root="locked-grid-v1"]{background-color:#252b31!important;color:#fff7ec!important;font-family:"PingFang SC","Microsoft YaHei",sans-serif!important}
+    [data-broll-theme-root="locked-grid-v1"]>.broll-background{position:absolute;inset:0;z-index:0;pointer-events:none;background-color:#252b31;background-image:radial-gradient(circle at 50% 0%,rgba(78,95,109,.18),transparent 60%),linear-gradient(rgba(132,153,171,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(132,153,171,.10) 1px,transparent 1px);background-size:auto,44px 44px,44px 44px;background-position:0 0,0 0,0 0}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.paper,.grid,.texture){display:none!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title,[data-broll-theme-root="locked-grid-v1"]>h1,[data-broll-theme-root="locked-grid-v1"]>h2{color:#fff7ec!important}
+    [data-broll-theme-root="locked-grid-v1"]>.title em,[data-broll-theme-root="locked-grid-v1"]>h1 em,[data-broll-theme-root="locked-grid-v1"]>h2 em{color:#e9a51a!important}
+    [data-broll-theme-root="locked-grid-v1"]>:is(.tag,.step){background:#394149!important;border-color:#71818e!important;color:#fff7ec!important}
+  </style>
+</template></body></html>

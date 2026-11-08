@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "example": true,
+  "note": "Bundled placeholder only. Run scripts/setup_config.py to generate your own registry under $IP_COURSE_HOME (default ~/.config/ip-course-videos).",
+  "referenceRoot": "assets/character-reference",
+  "policy": {
+    "attachApprovedReferencesForEveryCastMember": true,
+    "blockMissingRequiredCharacter": true,
+    "allowSceneFramesAsCanonicalReferences": false,
+    "requireHashMatch": true
+  },
+  "characters": [
+    {
+      "characterId": "ip-host",
+      "displayName": "示例 IP 人物（占位）",
+      "role": "required-host",
+      "status": "approved",
+      "version": "0.0.0-example",
+      "canonicalPath": "../ip-reference/host-front.png",
+      "sha256": "0599d19d3347825e4c20cd52fa906486b8278861b63f61486689dc36d87f160f",
+      "identityInvariants": [
+        "圆形米白头部与两只黑色圆眼",
+        "橙黄色圆角矩形身体",
+        "深灰色粗描边扁平画风"
+      ],
+      "poseReferences": []
+    }
+  ]
+}

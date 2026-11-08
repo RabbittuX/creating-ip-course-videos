@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "canvas": { "width": 1920, "height": 1080, "fps": 30 },
+  "colors": {
+    "arollScreen": "#f8f7f6",
+    "arollIllustration": "#fdfaf4",
+    "brollBackground": "#252b31",
+    "card": "#394149",
+    "border": "#71818e",
+    "accent": "#e9a51a",
+    "completed": "#55d4b4",
+    "lightText": "#fff7ec",
+    "darkText": "#2d3137"
+  },
+  "grid": {
+    "sizePx": 44,
+    "line": "rgba(132, 153, 171, 0.10)",
+    "radialGlow": "rgba(78, 95, 109, 0.18)",
+    "css": "radial-gradient(circle at 50% 0%, rgba(78, 95, 109, 0.18), transparent 60%), linear-gradient(rgba(132, 153, 171, 0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(132, 153, 171, 0.10) 1px, transparent 1px)"
+  },
+  "typography": {
+    "chapterTitlePx": 92,
+    "chapterLabelPx": 28,
+    "subchapterTitlePx": 88,
+    "brollTitlePx": 58
+  }
+}
